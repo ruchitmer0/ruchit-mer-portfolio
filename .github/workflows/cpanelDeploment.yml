@@ -1,0 +1,21 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main # Change to your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Sync with cPanel
+      run: |
+        rsync -avz --delete --exclude '.git' --exclude '.github' -e "ssh -o StrictHostKeyChecking=no" ./ username@your-server-ip:/path-to-cpanel-directory
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+   
