@@ -9,7 +9,7 @@ export default function Footer({}: Props) {
   const { isDarkMode, toggleDarkMode } = useDarkMode(); // Use the context
 
   return (
-    <footer className="fixed bottom-0 w-full bg-transparent py-4 flex items-center justify-between px-6 z-50">
+    <footer className="fixed bottom-0 w-full bg-transparent py-1 flex items-center justify-between px-6 z-50">
       {/* Logo in the center */}
       <div className="flex-1 flex justify-center items-center">
         <Link href="/">
