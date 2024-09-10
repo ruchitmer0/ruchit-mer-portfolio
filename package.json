@@ -1,7 +1,7 @@
 {
   "name": "ruchit-mer-portfolio",
   "version": "0.1.0",
-  "homepage": "./pages/index.tsx",
+  "homepage": "https://ruchitmer.com/",
   "private": true,
   "scripts": {
     "dev": "next dev",
